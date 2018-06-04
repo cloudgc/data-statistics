@@ -30,6 +30,7 @@ print(sdarry[1, 2])
 print(sdarry[:, 2])
 print(sdarry[2, :])
 
+
 # get a row or a column mean of data
 # axis=1 is row
 # axis=0 is column
