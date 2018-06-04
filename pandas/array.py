@@ -17,3 +17,39 @@ print(dif.dropna())
 
 dif = stocks2.add(stocks, fill_value=0)
 print(dif)
+
+saleLog = {
+    'date': ['2018-01-01', '2018-01-02', '2018-01-03'],
+    'cardno': ['001', '002', '001'],
+    'name': ['vc银翘片', '清热解毒片', '感康'],
+    'num': [3, 2, 5],
+    'money': [18, 22.1, 61.6],
+    'actually': [16.1, 20.3, 52.1]
+}
+
+saleDf = pd.DataFrame(saleLog)
+
+print(saleDf)
+
+from collections import OrderedDict
+
+saleOrderDict = OrderedDict(saleLog)
+print(saleOrderDict)
+
+saleOrderDf = pd.DataFrame(saleOrderDict)
+print(saleOrderDf)
+
+print(saleOrderDf.mean())
+
+print(saleOrderDf.iloc[0, 1])
+
+print(saleOrderDf.iloc[0, :])
+print(saleOrderDf.iloc[:, 0])
+
+
+
+print(saleOrderDf.loc[0, 'name'])
+print(saleOrderDf.loc[0, :])
+print(saleOrderDf.loc[:, 'name'])
+
+print(saleOrderDf['name'])
