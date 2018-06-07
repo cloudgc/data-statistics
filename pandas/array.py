@@ -46,10 +46,17 @@ print(saleOrderDf.iloc[0, 1])
 print(saleOrderDf.iloc[0, :])
 print(saleOrderDf.iloc[:, 0])
 
-
-
 print(saleOrderDf.loc[0, 'name'])
 print(saleOrderDf.loc[0, :])
 print(saleOrderDf.loc[:, 'name'])
 
 print(saleOrderDf['name'])
+print(saleOrderDf[['name', 'actually']])
+print(saleOrderDf.loc[:, 'date': 'actually'])
+
+qrySer = saleOrderDf.loc[:, 'num'] > 2
+print(qrySer)
+
+print(saleOrderDf.loc[qrySer, :])
+
+pd.read
