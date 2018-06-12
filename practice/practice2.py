@@ -1,23 +1,10 @@
-# encode=utf-8
-
-"""
-一维数组
-"""
-import pandas as pd
-
-stocks = pd.Series([20.1, 100.0, 66.5], index=['tx', 'tobao', 'apple'])
-
-stocks2 = pd.Series([23.1, 95, 88], index=['tx', 'tobao', 'google'])
-
-# stocks average
-average = stocks.mean
-
 """
 二维数组
 """
 
 # use numpy
 import numpy as np
+import pandas as pd
 
 sdarry = np.array([
     [1, 2, 3, 4],
@@ -29,7 +16,6 @@ sdarry = np.array([
 print(sdarry[1, 2])
 print(sdarry[:, 2])
 print(sdarry[2, :])
-
 
 # get a row or a column mean of data
 # axis=1 is row
